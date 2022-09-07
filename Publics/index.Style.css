@@ -24,8 +24,102 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
   line-height: 1.7;
+  background-color: #ffffff;
 }
 
 a {
+  color: hsl(198deg, 62%, 26%);
   text-decoration: none;
+}
+
+footer {
+  color: hsl(167deg, 41%, 23%);
+  background-color: hsl(168deg, 43%, 66%);
+}
+
+header {
+  background-image: url("../../Publics/images/mobile/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+  padding: 1.7rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-card {
+  display: block;
+  position: fixed;
+  left: 5%;
+  top: 5rem;
+  transform: translateX(-120%);
+  background: hsl(46deg, 55%, 94%);
+  text-align: center;
+  padding: 2rem;
+  z-index: 10;
+  width: 88%;
+}
+.nav-card::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -1.2rem;
+  border-top: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid hsl(46deg, 55%, 94%);
+  border-left: 0.6rem solid transparent;
+  border-right: 0.6rem solid hsl(46deg, 55%, 94%);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+}
+.nav-links > li {
+  color: hsl(46deg, 55%, 94%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 5px 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.nav-links > li > a {
+  color: hsl(210deg, 4%, 67%);
+}
+.nav-links > li > a:hover {
+  color: black;
+  text-transform: uppercase;
+}
+.nav-links > li:hover {
+  color: hsl(46deg, 55%, 94%);
+  border: hsl(51deg, 100%, 49%) 1px solid;
+  border-radius: 20px;
+  background: hsl(51deg, 100%, 49%);
+}
+
+.head-design {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head-design > h1 {
+  color: #ffffff;
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 9px;
+  line-height: 1.2;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }/*# sourceMappingURL=index.Style.css.map */

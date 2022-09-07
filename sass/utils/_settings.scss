@@ -20,11 +20,18 @@ html {
 }
 
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: $font-family;
     font-size: 18px;
     line-height: 1.7;
+    background-color: $white;
 }
 
 a {
+    color: $dark-blue;
     text-decoration: none;
+}
+
+footer {
+    color: $dark-desaturated-cyan;
+    background-color: $dark-moderate-cyan;
 }
