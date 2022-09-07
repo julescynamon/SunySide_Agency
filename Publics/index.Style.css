@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,700&display=swap"); /* Flex */
-/* padding */
-/* margin */
-/* Base du site settings */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,700&display=swap"); /* Base du site settings */
 * {
   margin: 0;
   padding: 0;
@@ -23,12 +20,10 @@ html {
 body {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
-  line-height: 1.7;
   background-color: #ffffff;
 }
 
 a {
-  color: hsl(198deg, 62%, 26%);
   text-decoration: none;
 }
 
@@ -122,4 +117,162 @@ header {
   line-height: 1.2;
   margin-top: 5rem;
   margin-bottom: 3rem;
+}
+
+.transform {
+  width: 100%;
+  height: 300px;
+}
+.transform > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.transform-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: hsl(232deg, 10%, 55%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.transform-desc > h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Fraunces", serif;
+  margin-bottom: 1rem;
+  color: hsl(212deg, 27%, 19%);
+}
+.transform-desc > p {
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+.transform-desc > a {
+  color: hsl(212deg, 27%, 19%);
+  font-weight: bold;
+  font-family: "Fraunces", serif;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+}
+.transform-desc > a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.7rem;
+  background: hsla(51deg, 100%, 49%, 0.42);
+  z-index: -1;
+  border-radius: 0.5rem;
+  transition: 0.35s;
+}
+
+.stand-out {
+  width: 100%;
+  height: 300px;
+}
+.stand-out > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.stand-out-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: hsl(232deg, 10%, 55%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.stand-out-article > h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Fraunces", serif;
+  margin-bottom: 1rem;
+  color: hsl(212deg, 27%, 19%);
+}
+.stand-out-article > p {
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+.stand-out-article > a {
+  color: hsl(212deg, 27%, 19%);
+  font-weight: bold;
+  font-family: "Fraunces", serif;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+}
+.stand-out-article > a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.7rem;
+  background: hsla(7deg, 99%, 70%, 0.47);
+  z-index: -1;
+  border-radius: 0.5rem;
+  transition: 0.35s;
+}
+
+.article-cherry {
+  position: relative;
+  text-align: center;
+  height: 599px;
+}
+.article-cherry > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content {
+  width: 330px;
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content > h1 {
+  color: hsl(167deg, 41%, 23%);
+  font-family: "Fraunces", serif;
+  letter-spacing: 2.7px;
+  margin-bottom: 2rem;
+}
+.content > p {
+  color: hsl(167deg, 41%, 23%);
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.article-photography {
+  position: relative;
+  text-align: center;
+  height: 599px;
+}
+.article-photography > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=index.Style.css.map */

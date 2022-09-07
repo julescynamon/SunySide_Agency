@@ -1,102 +1,81 @@
-/* Flex */
-
-@mixin d-flex {
+@mixin article {
     display: flex;
-}
-
-@mixin flex-row {
-    flex-direction: row;
-}
-
-@mixin flex-column {
     flex-direction: column;
-}
-
-@mixin justify-content-center {
     justify-content: center;
-}
-
-@mixin align-items-center {
     align-items: center;
+    padding: 2rem;
+    color: $dark-grayish-blue;
+    font-family: $font-family;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 
-@mixin flex-fill {
-    flex: 1 1 auto;
+@mixin article-title {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: $font-family-2;
+    margin-bottom: 1rem;
+    color: $very-dark-desaturated-blue;
 }
 
-/* padding */
-
-@mixin p-5 {
-    padding: 5px;
+@mixin article-paragraph {
+    font-size: 14px;
+    margin-bottom: 2rem;
 }
 
-
-@mixin p-10 {
-    padding: 10px;
+@mixin article-link {
+    color: $very-dark-desaturated-blue;
+    font-weight: bold;
+    font-family: $font-family-2;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
 }
 
-@mixin p-20 {
-    padding: 20px;
+@mixin image-article {
+    width: 100%;
+    height: 300px;
+
+    &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
-@mixin px-20 {
-    padding-left: 20px;
-    padding-right: 20px;
+@mixin image-writte {
+    position: relative;
+    text-align: center;
+
+    &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
-@mixin p-30 {
-    padding: 30px;
-}
+@mixin writte {
+    width: 330px;
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-/* margin */
+    &>h1 {
+        color: $dark-desaturated-cyan;
+        font-family: $font-family-2;
+        letter-spacing: 2.7px;
+        margin-bottom: 2rem;
+    }
 
-@mixin m-10 {
-    margin: 10px;
-}
-
-@mixin mb-5 {
-    margin-bottom: 5px;
-}
-
-@mixin mb-10 {
-    margin-bottom: 10px;
-}
-
-@mixin mb-20 {
-    margin-bottom: 20px;
-}
-
-@mixin mb-70 {
-    margin-bottom: 70px;
-}
-
-@mixin m-20 {
-    margin: 20px;
-}
-
-@mixin m-30 {
-    margin: 30px;
-}
-
-@mixin mr-10 {
-    margin-right: 10px;
-}
-
-@mixin mr-20 {
-    margin-right: 20px;
-}
-
-@mixin ml-10 {
-    margin-left: 10px;
-}
-
-@mixin mt-5 {
-    margin-top: 5px;
-}
-
-
-// animations
-
-@mixin anim {
-    transition: all 0.3s ease-in-out;
+    &>p {
+        color: $dark-desaturated-cyan;
+        font-family: $font-family;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
 }
