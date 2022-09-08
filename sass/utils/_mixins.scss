@@ -64,14 +64,12 @@
     transform: translate(-50%, -50%);
 
     &>h1 {
-        color: $dark-desaturated-cyan;
         font-family: $font-family-2;
         letter-spacing: 2.7px;
         margin-bottom: 2rem;
     }
 
     &>p {
-        color: $dark-desaturated-cyan;
         font-family: $font-family;
         font-size: 16px;
         letter-spacing: 0;
