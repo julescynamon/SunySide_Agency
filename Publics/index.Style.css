@@ -48,11 +48,10 @@ header {
 }
 
 .nav-card {
-  display: block;
+  display: none;
   position: fixed;
   left: 5%;
   top: 5rem;
-  transform: translateX(-120%);
   background: hsl(46deg, 55%, 94%);
   text-align: center;
   padding: 2rem;
@@ -376,28 +375,47 @@ footer {
   text-align: center;
 }
 
+.socials {
+  width: 100%;
+}
 .socials > h2 {
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
 .socials > h2 > img {
-  width: 100px;
-  height: 60px;
+  width: 10rem;
+  filter: brightness(0) saturate(100%) invert(34%) sepia(45%) saturate(499%) hue-rotate(116deg) brightness(102%) contrast(88%);
 }
-.socials > p {
-  color: #ffffff;
-  font-family: "Barlow", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
+
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 7rem;
 }
-.socials > a {
-  color: #ffffff;
-  font-family: "Barlow", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-decoration: none;
-  margin-bottom: 2rem;
+.menu-footer > a {
+  color: hsl(168deg, 34%, 41%);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 4rem;
+}
+.links > a {
+  color: hsl(168deg, 34%, 41%);
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.attribution > a {
+  color: hsl(168deg, 34%, 41%);
+  margin-left: 3px;
 }/*# sourceMappingURL=index.Style.css.map */
