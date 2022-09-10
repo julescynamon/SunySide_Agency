@@ -3,11 +3,17 @@
 header {
     background-image: url("../../Publics/images/mobile/image-header.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     width: 100%;
     height: 90vh;
     padding: 1.7rem;
+
+    @media (min-width: 900px) {
+        background-image: url("../../Publics/images/desktop/image-header.jpg");
+        background-position: center;
+        height: 100vh;
+    }
 }
 
 .menu {
@@ -93,6 +99,62 @@ header {
     }
 }
 
+@media screen and (min-width: 900px) {
+
+
+
+    .nav-card {
+        display: block;
+        position: static;
+        background: none;
+        padding: 0;
+
+
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        &>li {
+            color: $white;
+            font-family: $font-family;
+            text-decoration: none;
+            letter-spacing: 0px;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+            padding: 5px 30px;
+
+            &>a {
+                color: $white;
+                font-size: 14px;
+
+                &:hover {
+                    color: $white;
+                    text-transform: uppercase;
+                }
+            }
+
+            &:hover {
+                color: $white;
+                border: none;
+                border-radius: 20px;
+                background: rgba(255, 255, 255, 0.506);
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+    }
+}
+
 
 
 // main
@@ -167,6 +229,10 @@ header {
 .article-cherry {
     @include image-writte;
     height: 599px;
+
+    @media (min-width: 900px) {
+        height: 500px;
+    }
 }
 
 .content {
@@ -177,12 +243,58 @@ header {
 .article-photography {
     @include image-writte;
     height: 599px;
+
+    @media (min-width: 900px) {
+        height: 500px;
+    }
 }
 
 .content-photography {
     @include writte;
     color: $dark-blue;
 }
+
+
+@media screen and (min-width: 900px) {
+    .learn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "transform-desc transform"
+            "stand-out stand-out-article"
+            "article-cherry article-photography";
+    }
+
+    .transform {
+        grid-area: transform;
+    }
+
+    .transform-desc {
+        grid-area: transform-desc;
+    }
+
+    .stand-out {
+        grid-area: stand-out;
+    }
+
+    .stand-out-article {
+        grid-area: stand-out-article;
+    }
+
+    .article-cherry {
+        grid-area: article-cherry;
+    }
+
+    .article-photography {
+        grid-area: article-photography;
+    }
+
+}
+
+
 
 // section testimonial
 
@@ -204,7 +316,16 @@ header {
         letter-spacing: 5px;
         margin-bottom: 4rem;
     }
+
+
+    @media screen and (min-width: 900px) {
+        padding: 4rem;
+    }
+
 }
+
+
+
 
 .testimonial {
     display: flex;
@@ -219,8 +340,24 @@ header {
         height: 70px;
         border-radius: 50%;
         margin-bottom: 2rem;
+
+        @media (min-width: 900px) {
+            width: 50px;
+            height: 50px;
+        }
     }
+
+    @media screen and (min-width: 900px) {
+        margin-right: 12px;
+    }
+
 }
+
+
+
+
+
+
 
 .testimonial-content {
     &>p {
@@ -228,6 +365,10 @@ header {
         font-family: $font-family;
         line-height: 1.8;
         margin-bottom: 2rem;
+
+        @media (min-width: 900px) {
+            font-size: 14px;
+        }
     }
 
     &>h3 {
@@ -235,6 +376,11 @@ header {
         font-family: $font-family-2;
         font-weight: bold;
         margin-bottom: 1rem;
+
+        @media (min-width: 900px) {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
     }
 
     &>h4 {
@@ -243,25 +389,91 @@ header {
         font-size: .8rem;
         font-weight: 400;
         letter-spacing: 2px;
+
+        @media (min-width: 900px) {
+            font-size: 13px;
+            letter-spacing: 0;
+        }
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .card-testimonial {
+        display: flex;
+        flex-direction: row;
     }
 }
 
 // Section gallerie
 
 .gallerie {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "item-1 item-2"
+        "item-3 item-4";
+    width: 100%;
+    height: auto;
+
+    @media screen and (min-width: 900px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "item-1 item-2 item-3 item-4";
+    }
+
 }
 
-.item {
-    width: 187px;
-    height: 200px;
-    overflow: hidden;
+
+.item-1 {
+    grid-area: item-1;
+    height: auto;
 
     &>img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
+    }
+}
+
+.item-2 {
+    grid-area: item-2;
+    height: auto;
+
+    &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.item-3 {
+    grid-area: item-3;
+    height: auto;
+
+    &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.item-4 {
+    grid-area: item-4;
+    height: auto;
+
+    &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -298,6 +510,21 @@ footer {
 
     &>a {
         color: hsl(168, 34%, 41%);
+
+        @media screen and (min-width: 900px) {
+            margin-right: 40px;
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+    }
+
+
+    @media screen and (min-width: 900px) {
+        justify-content: center;
+        margin-bottom: 4rem;
     }
 }
 
@@ -310,6 +537,21 @@ footer {
 
     &>a {
         color: hsl(168, 34%, 41%);
+
+        @media screen and (min-width: 900px) {
+            margin-right: 20px;
+        }
+
+        &>img {
+
+            &:hover {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        justify-content: center;
     }
 }
 
